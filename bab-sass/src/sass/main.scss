@@ -1,0 +1,18 @@
+// Variable And Function
+@use './partials/variables';
+
+// Base and Layout
+@use './partials/base';
+@use './partials/breakpoints';
+@use './partials/grid';
+
+// Color
+@use './partials/colors';
+
+// Components
+@use './components/card.scss';
+@use './components/navbar.scss';
+@use './components/buttons.scss';
+
+// Utilities
+@use './partials/utilities';

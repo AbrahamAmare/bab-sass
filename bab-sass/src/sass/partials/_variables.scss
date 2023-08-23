@@ -1,0 +1,45 @@
+
+// Theme Colors
+$primary: #1AC0C6;
+$secondary: #F6C31C;
+$tertiary: #E74645;
+
+$info: #5BC0DE;
+$warning: #FFCC00;
+$error: #D32752;
+
+// Color Palletes
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "info": $info,
+    "warninig": $warning,
+    "error": $error,
+
+    "coral": #FB7756,
+    "crayola": #FACD60,
+    "screaming green": #4DFF4D,
+    "indigo dye": #122C91,
+    "ufo green": #2ABC80
+);
+
+// Spacing
+
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// Borders
+$base-border-thickness: 1px;
+$base-border-radius: 10px;
+
+// Box Shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+// Font Sizes
+$base-font-size: 1rem;
+
+$font-size-xs: $base-padding * 0.5;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;

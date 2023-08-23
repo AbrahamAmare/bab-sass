@@ -1,0 +1,33 @@
+@use '../partials/variables';
+
+.navbar-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    @extend .navbar-layout;
+    padding: variables.$base-padding variables.$base-padding * 2;
+    box-shadow: variables.$base-box-shadow;
+
+    .site-title {
+        font-size: variables.$font-size-xl;
+    }
+
+    .container {
+        @extend .navbar-layout;
+    }
+
+    .navbar-links {
+        display: flex;
+    }
+}
+
+@each $key, $val in variables.$colors {
+    .navbar-#{$key} {
+        @extend .navbar;
+        background-color: $val;
+    }
+}

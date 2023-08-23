@@ -1,0 +1,33 @@
+@use '../partials/variables' as var;
+@use 'sass:math';
+
+.card {
+    display: block;
+    padding: var.$base-padding;
+    border: var.$base-border-thickness solid #ddd;
+    box-shadow: var.$base-box-shadow;
+    border-radius: var.$base-border-radius;
+    .card-img {
+        margin-bottom: .25rem;
+    }
+
+    .card-title {
+        font-size: var.$font-size-lg;
+        font-weight: bold;
+        margin: var.$base-margin 0;
+    }
+
+    .card-body {
+        font-size: var.$base-font-size;
+        line-height: 1.2;
+        a {
+            text-decoration: underline;
+        }
+        margin: .4rem 0;
+    }
+
+    .card-footer
+    {
+        max-width: 100%;
+    }
+}

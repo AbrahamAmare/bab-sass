@@ -1,0 +1,61 @@
+.navbar-layout, .navbar .container, .navbar-ufo green .container, .navbar-indigo dye .container, .navbar-screaming green .container, .navbar-crayola .container, .navbar-coral .container, .navbar-error .container, .navbar-warninig .container, .navbar-info .container, .navbar-tertiary .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-ufo green, .navbar-indigo dye, .navbar-screaming green, .navbar-crayola, .navbar-coral, .navbar-error, .navbar-warninig, .navbar-info, .navbar-tertiary, .navbar-secondary, .navbar-primary {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar, .navbar-ufo green, .navbar-indigo dye, .navbar-screaming green, .navbar-crayola, .navbar-coral, .navbar-error, .navbar-warninig, .navbar-info, .navbar-tertiary, .navbar-secondary, .navbar-primary {
+  padding: 0.75rem 1.5rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .site-title, .navbar-ufo green .site-title, .navbar-indigo dye .site-title, .navbar-screaming green .site-title, .navbar-crayola .site-title, .navbar-coral .site-title, .navbar-error .site-title, .navbar-warninig .site-title, .navbar-info .site-title, .navbar-tertiary .site-title, .navbar-secondary .site-title, .navbar-primary .site-title {
+  font-size: 2rem;
+}
+.navbar .navbar-links, .navbar-ufo green .navbar-links, .navbar-indigo dye .navbar-links, .navbar-screaming green .navbar-links, .navbar-crayola .navbar-links, .navbar-coral .navbar-links, .navbar-error .navbar-links, .navbar-warninig .navbar-links, .navbar-info .navbar-links, .navbar-tertiary .navbar-links, .navbar-secondary .navbar-links, .navbar-primary .navbar-links {
+  display: flex;
+}
+
+.navbar-primary {
+  background-color: #1AC0C6;
+}
+
+.navbar-secondary {
+  background-color: #F6C31C;
+}
+
+.navbar-tertiary {
+  background-color: #E74645;
+}
+
+.navbar-info {
+  background-color: #5BC0DE;
+}
+
+.navbar-warninig {
+  background-color: #FFCC00;
+}
+
+.navbar-error {
+  background-color: #D32752;
+}
+
+.navbar-coral {
+  background-color: #FB7756;
+}
+
+.navbar-crayola {
+  background-color: #FACD60;
+}
+
+.navbar-screaming green {
+  background-color: #4DFF4D;
+}
+
+.navbar-indigo dye {
+  background-color: #122C91;
+}
+
+.navbar-ufo green {
+  background-color: #2ABC80;
+}/*# sourceMappingURL=navbar.css.map */

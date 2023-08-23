@@ -1,0 +1,9 @@
+/* .test {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: end;
+    gap: 8px;
+    max-width: 80%;
+    margin: 0 auto;
+} */

@@ -1,0 +1,52 @@
+@use './variables';
+
+@each $key,
+$value in variables.$colors {
+    .text-#{$key} {
+        color: $value
+    }
+
+    .text-hover-#{$key} {
+        &:hover {
+            color: $value;
+        }
+    }
+
+    .bg-#{$key} {
+        background-color: $value;
+    }
+
+    // Light
+    @for $i from 1 through 5 {
+        .text-#{$key}-light-#{$i} {
+            color: lighten($value, $i * 10);
+        }
+
+        .text-hover-#{$key}-light-#{$i} {
+            &:hover {
+                color: lighten($value, $i * 10);
+            }
+        }
+
+        .bg-#{$key}-light-#{$i} {
+            background-color: lighten($value, $i * 10);
+        }
+    }
+
+    // Dark
+    @for $i from 1 through 5 {
+        .text-#{$key}-dark-#{$i} {
+            color: daken($value, $i * 10);
+        }
+
+        .text-hover-#{$key}-dark-#{$i} {
+            &:hover {
+                color: daken($value, $i * 10);
+            }
+        }
+
+        .bg-#{$key}-dark-#{$i} {
+            background-color: darken($value, $i * 10);
+        }
+    }
+}

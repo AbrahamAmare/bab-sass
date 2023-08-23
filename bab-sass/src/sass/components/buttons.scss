@@ -1,0 +1,61 @@
+@use '../partials/variables' as var;
+
+@mixin btn($bg-color: var.$primary){
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    border-radius: var.$base-border-radius;
+    background-color: $bg-color
+}
+
+@mixin small {
+    padding: var.$base-padding * .75 var.$base-padding * .5;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+@mixin normall {
+    padding: var.$base-padding var.$base-padding * 1;
+    font-size: 1rem;
+}
+
+@mixin large {
+    padding: var.$base-padding var.$base-padding * 2;
+    font-size: 1.2rem;
+}
+
+.btn {
+    @include btn;
+
+    &-sm {
+        @include small
+    }
+
+    &-md {
+        @include normall
+    }
+
+    &-lg {
+        @include large
+    }
+}
+
+@each $key, $val in var.$colors {
+    .btn-#{$key} {
+        @include btn($val);
+        background-color: $val;
+        &:hover{
+            background-color: lighten($val, 5);
+        }
+    }
+
+    .btn-outlined-#{$key} {
+        @include btn(#fff);
+        background-color: #fff;
+        border: var.$base-border-thickness solid $val;
+        &:hover {
+            background-color: $val;
+        }
+    }
+}

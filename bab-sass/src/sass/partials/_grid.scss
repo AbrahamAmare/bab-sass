@@ -1,0 +1,150 @@
+@use 'sass:math';
+@use './breakpoints';
+
+$grid-cols: 12;
+$grid-rows: 12;
+
+$grid-layouts-x: start, center, end, space-evenly, space-around, space-between;
+$grid-layouts-y: start, center, end;
+
+$grid-gaps: (
+    "1": .5rem,
+    "2": .75rem,
+    "3": 1rem,
+    "4": 1.5rem,
+    "5": 2rem,
+);
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+// grid layout
+
+@each $val in $grid-layouts-x {
+    .content-#{$val} {
+        justify-content: $val;
+    }
+}
+
+@each $val in $grid-layouts-y {
+    .items-#{$val} {
+        align-items: $val;
+    }
+}
+
+// grid gap
+
+@each $key, $value in $grid-gaps {
+    .grid-gap-#{$key} {
+        gap: $value;
+    }
+
+    // .gap-#{$key} {
+    //     margin-left: -$value;
+    //     margin-right: $value;
+    // }
+}
+
+// grid columns
+@for $i from 1 through $grid-cols {
+    .grid-cols-#{$i}{
+        grid-template-columns: repeat($i, 1fr);
+    }
+}
+
+// grid rows
+
+@for $i from 1 through $grid-rows {
+    .grid-rows-#{$i} {
+        grid-template-rows: repeat($i, 1fr);
+    }
+}
+
+// grids responsive
+
+@include breakpoints.xs {
+    @for $i from 1 through $grid-cols {
+        .grid-cols-#{$i}-xs {
+            grid-template-columns: repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.xs {
+    @for $i from 1 through $grid-rows {
+        .grid-rows-#{$i}-xs {
+            grid-template-rows:  repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.sm {
+    @for $i from 1 through $grid-cols {
+        .grid-cols-#{$i}-sm {
+            grid-template-columns: repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.sm {
+    @for $i from 1 through $grid-rows {
+        .grid-rows-#{$i}-sm {
+            grid-template-rows:  repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.md {
+    @for $i from 1 through $grid-cols {
+        .grid-cols-#{$i}-md {
+            grid-template-columns: repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.md {
+    @for $i from 1 through $grid-rows {
+        .grid-rows-#{$i}-md {
+            grid-template-rows:  repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.lg {
+    @for $i from 1 through $grid-cols {
+        .grid-cols-#{$i}-lg {
+            grid-template-columns: repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.lg {
+    @for $i from 1 through $grid-rows {
+        .grid-rows-#{$i}-lg {
+            grid-template-rows:  repeat($i, 1fr)
+        }
+    }
+}
+
+
+@include breakpoints.xl {
+    @for $i from 1 through $grid-cols {
+        .grid-cols-#{$i}-xl {
+            grid-template-columns: repeat($i, 1fr)
+        }
+    }
+}
+
+@include breakpoints.xl {
+    @for $i from 1 through $grid-rows {
+        .grid-rows-#{$i}-xl {
+            grid-template-rows:  repeat($i, 1fr)
+        }
+    }
+}
